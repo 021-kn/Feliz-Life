@@ -44,7 +44,7 @@
             height: 2px;
             background-color: white;
             margin: 20px auto;
-            display: none;
+            display: none; /* Linha escondida até clicar */
         }
         .message {
             display: none;
@@ -75,12 +75,6 @@
         .click-button i {
             margin-right: 8px;
         }
-        .clock {
-            font-size: 18px;
-            margin-top: 20px;
-            font-weight: bold;
-            color: #ff5733;
-        }
         .heart {
             color: #ff5733;
             font-size: 24px;
@@ -106,10 +100,9 @@
 
     <div class="message">
         <h2>Feliz Aniversário!<span class="heart">&#10084;</span></h2>
-        <div id="clock" class="clock"></div>
     </div>
 
-    <div class="divider"></div>
+    <div class="divider"></div> <!-- A linha estará aqui depois de clicar -->
 
     <div class="message" id="fullMessage">
         Hoje é um dia mais do que especial, porque é o dia em que Deus me presenteou com a melhor mãe do mundo! ✨ Quero te agradecer por cada abraço, cada conselho, cada gesto de amor e cuidado que faz toda a diferença na minha vida. Você é minha inspiração, minha fortaleza e o meu maior exemplo de amor e dedicação.
@@ -126,30 +119,10 @@
             document.querySelector('.music-player').style.display = 'flex';
             document.querySelector('.photo').style.display = 'block';
             document.querySelector('.message').style.display = 'block';
-            document.querySelector('.divider').style.display = 'block';
+            document.querySelector('.divider').style.display = 'block';  // Linha visível após clique
             document.querySelector('.click-button').style.display = 'none';
             document.querySelector('#fullMessage').style.display = 'block';
         }
-
-        // Função para calcular o tempo desde a data especificada
-        function startClock() {
-            const startDate = new Date("March 8, 1985 00:00:00");
-            setInterval(() => {
-                const currentDate = new Date();
-                const diff = currentDate - startDate;
-                const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-                const months = Math.floor((diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44));
-                const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-                document.getElementById("clock").innerHTML = `${years} anos, ${months} meses, ${days} dias, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
-            }, 1000);
-        }
-
-        // Chama a função para iniciar o relógio
-        startClock();
     </script>
 </body>
 </html>
