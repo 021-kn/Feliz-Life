@@ -81,6 +81,14 @@
             font-weight: bold;
             color: #ff5733;
         }
+        .heart {
+            color: #ff5733;
+            font-size: 24px;
+            margin-left: 10px;
+        }
+        h2 {
+            font-size: 24px;
+        }
     </style>
 </head>
 <body>
@@ -97,13 +105,13 @@
     </div>
 
     <div class="message">
-        <h2>Feliz Aniversário!</h2>
+        <h2>Feliz Aniversário!<span class="heart">&#10084;</span></h2>
         <div id="clock" class="clock"></div>
     </div>
 
     <div class="divider"></div>
 
-    <div class="message">
+    <div class="message" id="fullMessage">
         Hoje é um dia mais do que especial, porque é o dia em que Deus me presenteou com a melhor mãe do mundo! ✨ Quero te agradecer por cada abraço, cada conselho, cada gesto de amor e cuidado que faz toda a diferença na minha vida. Você é minha inspiração, minha fortaleza e o meu maior exemplo de amor e dedicação.
         <br><br>
         Que seu dia seja maravilhoso, iluminado e tão abençoado quanto você merece. Que Deus te encha de saúde, paz e felicidade, e que eu possa retribuir um pouquinho de tudo que você já fez por mim.
@@ -120,6 +128,7 @@
             document.querySelector('.message').style.display = 'block';
             document.querySelector('.divider').style.display = 'block';
             document.querySelector('.click-button').style.display = 'none';
+            document.querySelector('#fullMessage').style.display = 'block';
         }
 
         // Função para calcular o tempo desde a data especificada
