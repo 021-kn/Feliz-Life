@@ -28,16 +28,20 @@
             z-index: 10;
         }
         .photo {
-            max-width: 350px;
-            margin-top: 80px;
+            max-width: 300px; /* Tamanho da foto ajustado */
+            margin-top: 150px; /* Maior distância entre o player e a foto */
             display: none;
             text-align: center;
+            position: relative;
+            border: 15px solid white; /* Moldura da foto */
+            padding: 20px; /* Espaço entre a imagem e a borda */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Sombra para dar efeito 3D */
+            background-color: white; /* Cor de fundo para a moldura */
         }
         .photo img {
             width: 100%;
             height: auto;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
         .divider {
             width: 100%; /* Linha ocupa toda a largura */
